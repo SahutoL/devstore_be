@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["devstore.onrender.com"]
+ALLOWED_HOSTS = ["devstore-9e9p.onrender.com"]
 
 
 # Application definition
@@ -130,7 +130,7 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    "https://devstore.onrender.com"
+    "https://devstore-9e9p.onrender.com"
 ]
 
 REST_FRAMEWORK = {
@@ -150,7 +150,7 @@ VAPID_PUBLIC_KEY = os.environ.get("PUBLIC_KEY")
 VAPID_PRIVATE_KEY = os.environ.get("PRIVATE_KEY")
 
 VAPID_CLAIMS = {
-    "sub": "mailto:your-email@example.com"
+    "sub": os.environ.get("EMAIL")
 }
 
 CRONJOBS = [
