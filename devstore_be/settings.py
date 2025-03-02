@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*", "192.168.0.7:3000"]
+ALLOWED_HOSTS = ["devstore.onrender.com"]
 
 
 # Application definition
@@ -130,8 +130,7 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://192.168.0.7:3000"
+    "https://devstore.onrender.com"
 ]
 
 REST_FRAMEWORK = {
